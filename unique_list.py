@@ -13,12 +13,10 @@ We've provided no test data, as that would be too easy. You can use our skeleton
 
 my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
 i = 1
-deleted = 0
-for item in my_list[1:]:
-    if(item in my_list[:i]):
+while i < len(my_list):
+    if my_list[i] in my_list[:i]:
         del my_list[i]
-        deleted = 1
-    if(deleted != 1):
+    else:
         i += 1
 print("The list with unique elements only:")
 print(my_list)
